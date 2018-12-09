@@ -145,7 +145,9 @@ export class EditorComponent extends Events implements AfterViewInit, ControlVal
     }
 
     this.ngZone.runOutsideAngular(() => {
-      getTinymce().init(finalInit);
+      setTimeout(() => {
+        getTinymce().init(finalInit);
+      });
     });
   }
 
